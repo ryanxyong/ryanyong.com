@@ -3,19 +3,19 @@
 
 html {
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   font-style: italic;
 }
 
 h2 {
-  text-align: center;
   border-bottom: 2px solid black;
   padding-bottom: 3px;
   margin-left: 40%;
   margin-right: 40%;
+  margin-top: 60px;
 }
 
 p, ul {
@@ -25,26 +25,32 @@ p, ul {
 }
 
 img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
 }
 
+.squircle {
+  border-radius: 25%;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
 .topnav {
   background-color: #b3daff;
-  text-align: center;
   padding: 10px;
 }
 
 .topnav a {
-  text-decoration: none;
-  padding: 10px 20px;
   color: black;
+  padding: 10px 20px;
 }
 
 .topnav a.active {
