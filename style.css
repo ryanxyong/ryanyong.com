@@ -37,10 +37,16 @@ img {
   margin-top: 40px;
 }
 
-.gallerypic {
-  width: 40%;
+.horipic {
+  width: 75%;
   object-fit: scale-down;
   margin-top: 30px
+}
+
+.vertpic {
+  width: 35%;
+  object-fit: scale-down;
+  margin-top: 30px;
 }
 
 .squircle {
