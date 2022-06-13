@@ -32,18 +32,32 @@ p, ul {
   position: relative;
 }
 
-.back, .forward {
+.picback {
+  left: 8%;
   cursor: pointer;
   position: absolute;
-  top: 48%;
+  top: 47%;
   width: auto;
   padding: 10px;
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   transition: .5s ease;
-  border-radius: 0 5px 5px 0;
-  user-select: none;
+  border-radius: 0 6px 6px 0;
+}
+
+.picforward {
+  right: 8%;
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  width: auto;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: .5s ease;
+  border-radius: 0 6px 6px 0;
 }
 
 img {
