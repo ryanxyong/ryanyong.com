@@ -4,6 +4,8 @@
 html {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
 }
 
 h1 {
@@ -24,15 +26,51 @@ p, ul {
   margin-right: 25%;
 }
 
+.piccarousel {
+  max-width: 75%;
+  margin: auto;
+  position: relative;
+}
+
+.back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: .5s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.conch {
+  display: none;
+}
+
+.nature {
+  display: none;
+}
+
+.architecture {
+  display: none;
+}
+
+.dartlib {
+  display: none;
+}
+
 .thumbnail {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin-top: 40px;
 }
@@ -70,4 +108,14 @@ a {
 
 .topnav a.active {
   color: #0066cc;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 4}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 4}
 }
