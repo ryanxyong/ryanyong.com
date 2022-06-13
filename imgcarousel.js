@@ -35,11 +35,11 @@ function photoCarousel(albumIdx, n) {
     n = currNaturePic;
   } else if (albumIdx == 2) {
     if (n > pics.length) {currArchitecturePic = 1}
-    if (n < 1) {n = pics.length}
+    if (n < 1) {currArchitecturePic = pics.length}
     n = currArchitecturePic;
   } else if (albumIdx == 3) {
     if (n > pics.length) {currDartlibPic = 1}
-    if (n < 1) {n = pics.length}
+    if (n < 1) {currDartlibPic = pics.length}
     n = currDartlibPic;
   }
 
