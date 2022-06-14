@@ -1,14 +1,16 @@
-let albumNames = ["conch", "nature", "architecture", "dartlib"]
+let albumNames = ["conch", "nature", "architecture", "dartlib", "boots"]
 let currConchPic = 1;
 let currNaturePic = 1;
 let currArchitecturePic = 1;
 let currDartlibPic = 1;
+let currBootsPic = 1;
 
 function nextPic(albumIdx) {
   if (albumIdx == 0) {photoCarousel(albumIdx, currConchPic += 1)}
   else if (albumIdx == 1) {photoCarousel(albumIdx, currNaturePic += 1)}
   else if (albumIdx == 2) {photoCarousel(albumIdx, currArchitecturePic += 1)}
   else if (albumIdx == 3) {photoCarousel(albumIdx, currDartlibPic += 1)}
+  else if (albumIdx == 4) {photoCarousel(albumIdx, currBootsPic += 1)}
 }
 
 function prevPic(albumIdx) {
@@ -16,6 +18,7 @@ function prevPic(albumIdx) {
   else if (albumIdx == 1) {photoCarousel(albumIdx, currNaturePic -= 1)}
   else if (albumIdx == 2) {photoCarousel(albumIdx, currArchitecturePic -= 1)}
   else if (albumIdx == 3) {photoCarousel(albumIdx, currDartlibPic -= 1)}
+  else if (albumIdx == 4) {photoCarousel(albumIdx, currBootsPic -= 1)}
 }
 
 function photoCarousel(albumIdx, n) {
@@ -41,6 +44,10 @@ function photoCarousel(albumIdx, n) {
     if (n > pics.length) {currDartlibPic = 1}
     if (n < 1) {currDartlibPic = pics.length}
     n = currDartlibPic;
+  } else if (albumIdx == 4) {
+    if (n > pics.length) {currBootsPic = 1}
+    if (n < 1) {currBootsPic = pics.length}
+    n = currBootsPic;
   }
 
   for (i = 0; i < pics.length; i++) {
@@ -57,3 +64,4 @@ photoCarousel(0, currConchPic);
 photoCarousel(1, currNaturePic);
 photoCarousel(2, currArchitecturePic);
 photoCarousel(3, currDartlibPic);
+photoCarousel(4, currBootsPic);
