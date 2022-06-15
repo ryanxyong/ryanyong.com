@@ -1,67 +1,41 @@
+// Ryan Yong
+// Last updated: 6.15.22
+
+// To hold all names of albums and their starting indices
 let albumNames = ["conch", "nature", "architecture", "dartlib", "boots"]
-let currConchPic = 1;
-let currNaturePic = 1;
-let currArchitecturePic = 1;
-let currDartlibPic = 1;
-let currBootsPic = 1;
+let currAlbumPic = [1, 1, 1, 1, 1]
 
+// to go to the next photo
 function nextPic(albumIdx) {
-  if (albumIdx == 0) {photoCarousel(albumIdx, currConchPic += 1)}
-  else if (albumIdx == 1) {photoCarousel(albumIdx, currNaturePic += 1)}
-  else if (albumIdx == 2) {photoCarousel(albumIdx, currArchitecturePic += 1)}
-  else if (albumIdx == 3) {photoCarousel(albumIdx, currDartlibPic += 1)}
-  else if (albumIdx == 4) {photoCarousel(albumIdx, currBootsPic += 1)}
+  for (albumIdx = 0; albumIdx < albumNames.length; albumIdx++) {
+    photoCarousel(albumIdx, currAlbumPic[albumIdx] += 1);
+  }
 }
 
+// To go to the previous photo
 function prevPic(albumIdx) {
-  if (albumIdx == 0) {photoCarousel(albumIdx, currConchPic -= 1)}
-  else if (albumIdx == 1) {photoCarousel(albumIdx, currNaturePic -= 1)}
-  else if (albumIdx == 2) {photoCarousel(albumIdx, currArchitecturePic -= 1)}
-  else if (albumIdx == 3) {photoCarousel(albumIdx, currDartlibPic -= 1)}
-  else if (albumIdx == 4) {photoCarousel(albumIdx, currBootsPic -= 1)}
+  for (albumIdx = 0; albumIdx < albumNames.length; albumIdx++) {
+    photoCarousel(albumIdx, currAlbumPic[albumIdx] -= 1);
+  }
 }
 
-function photoCarousel(albumIdx, n) {
+// Changes the shown photo
+function photoCarousel(albumIdx, currPic) {
   let i;
   var pics = document.getElementsByClassName(albumNames[albumIdx]);
-  console.log(pics)
-  console.log(n)
-  console.log(albumIdx)
 
-  if (albumIdx == 0) {
-    if (n > pics.length) {currConchPic = 1}
-    if (n < 1) {currConchPic = pics.length}
-    n = currConchPic;
-  } else if (albumIdx == 1) {
-    if (n > pics.length) {currNaturePic = 1}
-    if (n < 1) {currNaturePic = pics.length}
-    n = currNaturePic;
-  } else if (albumIdx == 2) {
-    if (n > pics.length) {currArchitecturePic = 1}
-    if (n < 1) {currArchitecturePic = pics.length}
-    n = currArchitecturePic;
-  } else if (albumIdx == 3) {
-    if (n > pics.length) {currDartlibPic = 1}
-    if (n < 1) {currDartlibPic = pics.length}
-    n = currDartlibPic;
-  } else if (albumIdx == 4) {
-    if (n > pics.length) {currBootsPic = 1}
-    if (n < 1) {currBootsPic = pics.length}
-    n = currBootsPic;
-  }
+  if (currPic > pics.length) {currAlbumPic[albumIdx] = 1}
+  if (currPic < 1) {currAlbumPic[albumIdx] = pics.length}
+  currPic = currAlbumPic[albumIdx];
 
   for (i = 0; i < pics.length; i++) {
     pics[i].style.display = "none";
   }
 
-  console.log(pics[0]);
-
   pics[n-1].style.display = "block";
-  console.log(n)
 }
 
-photoCarousel(0, currConchPic);
-photoCarousel(1, currNaturePic);
-photoCarousel(2, currArchitecturePic);
-photoCarousel(3, currDartlibPic);
-photoCarousel(4, currBootsPic);
+// Runs through to show all base images on page load
+for (albumIdx = 0; albumIdx < albumNames.length; albumIdx++) {
+  photoCarousel(albumIdx, currAlbumPic[albumIdx]);
+}
