@@ -6,59 +6,64 @@ Last updated: 6.15.22 */
 
 html {
   font-family: 'Quicksand', sans-serif;
-  text-align: center;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
+  /* height: 100vh;
+  width: 100vw; */
 }
 
 h1 {
   font-style: italic;
+  text-align: center;
 }
 
 h2 {
   border-bottom: 2px solid black;
   padding-bottom: 3px;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
+  text-align: center;
 }
 
-p, ul {
+h3 {
+  text-align: center;
+}
+
+body {
   text-align: justify;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 25vw;
+  margin-right: 25vw;
 }
 
 .piccarousel {
-  max-width: 75%;
+  max-width: 90vw;
   margin: auto;
   position: relative;
 }
 
 .picback {
-  left: 8%;
+  left: 0%;
   cursor: pointer;
   position: absolute;
-  top: 47%;
-  width: auto;
-  padding: 10px;
+  top: 46%;
+  /* width: auto; */
   color: black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 4vh;
   transition: .5s ease;
   border-radius: 0 6px 6px 0;
 }
 
 .picforward {
-  right: 8%;
+  right: 0%;
   cursor: pointer;
   position: absolute;
-  top: 47%;
-  width: auto;
-  padding: 10px;
+  top: 46%;
+  /* width: auto; */
   color: black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 4vh;
   transition: .5s ease;
   border-radius: 0 6px 6px 0;
 }
@@ -86,22 +91,23 @@ img {
 }
 
 .thumbnail {
-  width: 250px;
-  height: 250px;
+  width: 30vh;
+  height: 30vh;
   object-fit: cover;
   margin-top: 40px;
 }
 
 .horipic {
-  width: 75%;
+  max-width: 85%;
   object-fit: scale-down;
-  margin-top: 30px
+  margin-top: 1vh;
 }
 
 .vertpic {
-  width: 35%;
+  max-width: 85%;
+  max-height: 60vh;
   object-fit: scale-down;
-  margin-top: 30px;
+  margin-top: 1vh;
 }
 
 .squircle {
@@ -115,12 +121,13 @@ a {
 
 .topnav {
   background-color: #b3daff;
-  padding: 10px;
+  padding: 1vh;
+  text-align: center;
 }
 
 .topnav a {
   color: black;
-  padding: 10px 20px;
+  padding: 5px 5px;
 }
 
 .topnav a.active {
@@ -135,4 +142,11 @@ a {
 @keyframes fade {
   from {opacity: 0}
   to {opacity: 4}
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }
