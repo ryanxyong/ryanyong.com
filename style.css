@@ -8,6 +8,7 @@ html {
   font-family: 'Quicksand', sans-serif;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
+  margin-bottom: 5vh;
 }
 
 h1 {
@@ -16,11 +17,11 @@ h1 {
 }
 
 h2 {
-  border-bottom: 2px solid black;
-  padding-bottom: 3px;
-  margin-left: 25vw;
-  margin-right: 25vw;
-  margin-top: 40px;
+  border-bottom: .3vh solid black;
+  padding-bottom: 1vh;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-top: 5vh;
   text-align: center;
 }
 
@@ -49,7 +50,6 @@ p, ul {
   font-weight: bold;
   font-size: 4vh;
   transition: .5s ease;
-  border-radius: 0 6px 6px 0;
 }
 
 .picforward {
@@ -61,7 +61,6 @@ p, ul {
   font-weight: bold;
   font-size: 4vh;
   transition: .5s ease;
-  border-radius: 0 6px 6px 0;
 }
 
 img {
@@ -90,7 +89,7 @@ img {
   width: 30vh;
   height: 30vh;
   object-fit: cover;
-  margin-top: 40px;
+  margin-top: 5vh;
 }
 
 .horipic {
@@ -143,7 +142,12 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-  p, ul, h2 {
+  h2 {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  p, ul {
     margin-left: 10vw;
     margin-right: 10vw;
   }
