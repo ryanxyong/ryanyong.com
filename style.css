@@ -41,7 +41,7 @@ p, ul {
 }
 
 .picback {
-  left: 0%;
+  left: 15vw;
   cursor: pointer;
   position: absolute;
   top: 46%;
@@ -53,7 +53,7 @@ p, ul {
 }
 
 .picforward {
-  right: 0%;
+  right: 15vw;
   cursor: pointer;
   position: absolute;
   top: 46%;
@@ -94,13 +94,14 @@ img {
 }
 
 .horipic {
-  max-width: 85%;
+  max-width: 50vw;
+  max-height: 60vh;
   object-fit: scale-down;
   margin-top: 1vh;
 }
 
 .vertpic {
-  max-width: 85%;
+  max-width: 50vw;
   max-height: 60vh;
   object-fit: scale-down;
   margin-top: 1vh;
@@ -118,13 +119,13 @@ a {
 .topnav {
   background-color: #b3daff;
   margin: -1vw -1vw 1vw -1vw;
-  padding: 1vh;
+  padding: 1.5vw 0vw 1vw 0vw;
   text-align: center;
 }
 
 .topnav a {
   color: black;
-  padding: 5px 5px;
+  padding: 1vw 2vw 0vw 2vw;
 }
 
 .topnav a.active {
@@ -149,5 +150,22 @@ a {
 
   .topnav {
     margin: -1vh -1vh -1vh -1vh;
+    padding: 1.5vh 0vh 1vh 0vh;
+  }
+
+  .picback {
+    left: 0%;
+  }
+  
+  .picforward {
+    right: 0%;
+  }
+
+  .horipic {
+    max-width: 85%;
+  }
+  
+  .vertpic {
+    max-width: 85%;
   }
 }
