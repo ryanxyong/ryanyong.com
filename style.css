@@ -8,8 +8,6 @@ html {
   font-family: 'Quicksand', sans-serif;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
-  /* height: 100vh;
-  width: 100vw; */
 }
 
 h1 {
@@ -20,8 +18,8 @@ h1 {
 h2 {
   border-bottom: 2px solid black;
   padding-bottom: 3px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 25vw;
+  margin-right: 25vw;
   margin-top: 40px;
   text-align: center;
 }
@@ -30,7 +28,7 @@ h3 {
   text-align: center;
 }
 
-body {
+p, ul {
   text-align: justify;
   margin-left: 25vw;
   margin-right: 25vw;
@@ -47,7 +45,6 @@ body {
   cursor: pointer;
   position: absolute;
   top: 46%;
-  /* width: auto; */
   color: black;
   font-weight: bold;
   font-size: 4vh;
@@ -60,7 +57,6 @@ body {
   cursor: pointer;
   position: absolute;
   top: 46%;
-  /* width: auto; */
   color: black;
   font-weight: bold;
   font-size: 4vh;
@@ -121,6 +117,7 @@ a {
 
 .topnav {
   background-color: #b3daff;
+  margin: -1vw -1vw 1vw -1vw;
   padding: 1vh;
   text-align: center;
 }
@@ -145,8 +142,12 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-  body {
+  p, ul, h2 {
     margin-left: 10vw;
     margin-right: 10vw;
+  }
+
+  .topnav {
+    margin: -1vh -1vh -1vh -1vh;
   }
 }
