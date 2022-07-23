@@ -11,6 +11,11 @@ html {
   margin-bottom: 5vh;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   font-style: italic;
   text-align: center;
@@ -33,6 +38,40 @@ p, ul {
   text-align: justify;
   margin-left: 25vw;
   margin-right: 25vw;
+}
+
+.logo {
+  max-height: 6vh;
+  padding: 2vh 0 0 2vh;
+  display: inline-block;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.bannerimg {
+  max-height: 30vh;
+  width: 95vw;
+  object-fit: cover;
+  font-size: 8vh;
+  margin-top: 5vh;
+  display: block;
+  opacity: .4;
+  transition: .2s;
+}
+
+.bannerimg:hover {
+  opacity: 1;
+  transition: .2s;
+}
+
+.bannerText {
+  position: absolute;
+  top: 50%;
+  left: 47%;
 }
 
 .piccarousel {
@@ -86,8 +125,8 @@ img {
 }
 
 .thumbnail {
-  width: 30vh;
-  height: 30vh;
+  width: 25vh;
+  height: 25vh;
   object-fit: cover;
   margin-top: 5vh;
 }
@@ -116,15 +155,16 @@ a {
 }
 
 .topnav {
+  width: 101vw;
   background-color: #b3daff;
-  margin: -1vw -1vw 1vw -1vw;
-  padding: 1.5vw 0vw 1vw 0vw;
+  margin: -1.5vh -1vw 1vh -1vw;
+  padding: 0vw 0vw 2vh 0vw;
   text-align: center;
 }
 
 .topnav a {
   color: black;
-  padding: 1vw 2vw 0vw 2vw;
+  padding: 2vh 2vw 0vw 2vw;
 }
 
 .topnav a.active {
