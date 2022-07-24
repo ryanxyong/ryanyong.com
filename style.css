@@ -42,7 +42,7 @@ p, ul {
 
 .logo {
   max-height: 6vh;
-  padding: 2vh 0 0 2vh;
+  padding: 4vh 0 0 2vh;
   display: inline-block;
 }
 
@@ -50,6 +50,8 @@ p, ul {
   position: relative;
   text-align: center;
   color: black;
+  /* opacity: .4;
+  transition: .2s; */
 }
 
 .bannerimg {
@@ -70,8 +72,19 @@ p, ul {
 
 .bannerText {
   position: absolute;
-  top: 50%;
-  left: 47%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  width: 30%;
+  font-size: 5vh;
+  opacity: 1;
+  transition: .2s;
+}
+
+.bannerText:hover {
+  opacity: 0;
+  transition: .2s;
 }
 
 .piccarousel {
