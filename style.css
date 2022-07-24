@@ -177,7 +177,8 @@ a {
 
 .topnav a {
   color: black;
-  padding: 2vh 2vw 0vw 2vw;
+  padding: 0vh 2vw 2vh 2vw;
+  margin: 2vh 0;
 }
 
 .topnav a.active {
