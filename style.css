@@ -168,9 +168,7 @@ a {
 }
 
 .topnav {
-  width: 101vw;
   background-color: #b3daff;
-  margin: -1.5vh -1vw 1vh -1vw;
   padding: 0vw 0vw 2vh 0vw;
   text-align: center;
 }
@@ -207,7 +205,6 @@ a {
   }
 
   .topnav {
-    margin: -1vh -1vh -1vh -1vh;
     padding: 1.5vh 0vh 1vh 0vh;
   }
 
