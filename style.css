@@ -42,7 +42,6 @@ p, ul {
 
 .logo {
   max-height: 6vh;
-  padding: 4vh 0 0 2vh;
   display: inline-block;
 }
 
@@ -169,14 +168,14 @@ a {
 
 .topnav {
   background-color: #b3daff;
-  padding: 0vw 0vw 2vh 0vw;
+  padding: 2vh 0vw 2vh 0vw;
   text-align: center;
 }
 
 .topnav a {
   color: black;
   padding: 0vh 2vw 2vh 2vw;
-  margin: 2vh 0;
+  /* margin: 2vh 0; */
 }
 
 .topnav a.active {
@@ -205,7 +204,7 @@ a {
   }
 
   .topnav {
-    padding: 1.5vh 0vh 1vh 0vh;
+    padding: 1vh 0vh 1vh 0vh;
   }
 
   .picback {
