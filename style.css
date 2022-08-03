@@ -51,22 +51,22 @@ p, ul {
   color: black;
 }
 
-.bannerimg {
-  max-height: 30vh;
+.banner-img {
+  height: 25vh;
   width: 95vw;
   object-fit: cover;
-  margin-top: 5vh;
+  margin-top: 4vh;
   display: block;
   opacity: .3;
   transition: .2s;
 }
 
-.bannerimg:hover {
+.banner-img:hover {
   opacity: 1;
   transition: .2s;
 }
 
-.bannerText {
+.banner-text {
   color: #0066cc;
   position: absolute;
   margin: 0 auto;
@@ -80,12 +80,12 @@ p, ul {
   transition: .2s;
 }
 
-.banner:hover .bannerText {
+.banner:hover .banner-text {
   opacity: 0;
   transition: .2s;
 }
 
-.works-container {
+.flex-container {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
