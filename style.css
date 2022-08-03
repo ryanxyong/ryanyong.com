@@ -100,11 +100,6 @@ p, ul {
   text-align: center;
 }
 
-.works:hover {
-  opacity: 1;
-  transition: .2s;
-}
-
 .works-img {
   width: 100%;
   height: 100%;
