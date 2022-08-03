@@ -45,52 +45,44 @@ p, ul {
   display: inline-block;
 }
 
-.banner {
-  position: relative;
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  color: black;
+  gap: 4vh;
 }
 
-.banner-img {
-  height: 25vh;
-  width: 95vw;
+.container-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-top: 4vh;
-  display: block;
   opacity: .3;
   transition: .2s;
 }
 
-.banner-img:hover {
+.container-img:hover {
   opacity: 1;
   transition: .2s;
 }
 
-.banner-text {
+.container-text {
   color: #0066cc;
   position: absolute;
   margin: 0 auto;
   left: 0;
   right: 0;
   top: 40%;
-  width: 30%;
-  font-size: 5vh;
+  width: 50%;
+  font-size: 2vh;
   pointer-events: none;
   opacity: 1;
   transition: .2s;
 }
 
-.banner:hover .banner-text {
-  opacity: 0;
-  transition: .2s;
-}
-
-.flex-container {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 4vh;
+.text-big {
+  font-size: 4vh;
+  width: 80%;
 }
 
 .works {
@@ -100,35 +92,19 @@ p, ul {
   text-align: center;
 }
 
-.works-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .3;
+.works:hover .container-text {
+  opacity: 0;
   transition: .2s;
 }
 
-.works-img:hover {
-  opacity: 1;
-  transition: .2s;
+.banner {
+  position: relative;
+  width: 92vw;
+  height: 20vh;  
+  text-align: center;
 }
 
-.works-text {
-  color: #0066cc;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 40%;
-  width: 50%;
-
-  font-size: 2vh;
-  pointer-events: none;
-  opacity: 1;
-  transition: .2s;
-}
-
-.works:hover .works-text {
+.banner:hover .container-text {
   opacity: 0;
   transition: .2s;
 }
@@ -183,6 +159,10 @@ img {
   display: none;
 }
 
+.boots {
+  display: none;
+}
+
 .thumbnail {
   width: 25vh;
   height: 25vh;
@@ -217,12 +197,12 @@ a {
   background-color: #b3daff;
   padding: 2vh 0vw 2vh 0vw;
   text-align: center;
+  margin-bottom: 4vh;
 }
 
 .topnav a {
   color: black;
   padding: 0vh 2vw 2vh 2vw;
-  /* margin: 2vh 0; */
 }
 
 .topnav a.active {

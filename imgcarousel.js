@@ -36,7 +36,12 @@ function photoCarousel(albumIdx, currPic) {
   pics[currPic-1].style.display = "block";
 }
 
-// Runs through to show all base images on page load
-for (albumIdx = 0; albumIdx < albumNames.length; albumIdx++) {
-  photoCarousel(albumIdx, currAlbumPic[albumIdx]);
+// // Runs through to show all base images on page load
+// for (albumIdx = 0; albumIdx < albumNames.length; albumIdx++) {
+//   photoCarousel(albumIdx, currAlbumPic[albumIdx]);
+// }
+
+// Loads initial image
+function loadStart(albumIdx) {
+  photoCarousel(albumIdx, 1);
 }
