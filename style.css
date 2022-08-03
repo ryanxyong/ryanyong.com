@@ -50,7 +50,8 @@ p, ul {
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 4vh;
+  gap: 2vw;
+  margin-top: 2vw;
 }
 
 .container-img {
@@ -99,7 +100,7 @@ p, ul {
 
 .banner {
   position: relative;
-  width: 92vw;
+  width: 96vw;
   height: 20vh;  
   text-align: center;
 }
@@ -197,7 +198,6 @@ a {
   background-color: #b3daff;
   padding: 2vh 0vw 2vh 0vw;
   text-align: center;
-  margin-bottom: 4vh;
 }
 
 .topnav a {
