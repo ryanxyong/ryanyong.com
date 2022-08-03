@@ -1,5 +1,5 @@
 /* Ryan Yong
-Last updated: 6.20.22 */
+Last updated: 8.2.22 */
 
 /* Import the Quicksand font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
@@ -49,8 +49,6 @@ p, ul {
   position: relative;
   text-align: center;
   color: black;
-  /* opacity: .4;
-  transition: .2s; */
 }
 
 .bannerimg {
@@ -77,11 +75,12 @@ p, ul {
   top: 40%;
   width: 30%;
   font-size: 5vh;
+  pointer-events: none;
   opacity: 1;
   transition: .2s;
 }
 
-.bannerText:hover {
+.banner:hover .bannerText {
   opacity: 0;
   transition: .2s;
 }
