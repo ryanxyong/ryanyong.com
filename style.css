@@ -22,10 +22,9 @@ h1 {
 }
 
 h2 {
-  border-bottom: .3vh solid black;
+  text-decoration: underline;
+  text-underline-offset: 1vh;
   padding-bottom: 1vh;
-  margin-left: 35vw;
-  margin-right: 35vw;
   margin-top: 5vh;
   text-align: center;
 }
@@ -156,7 +155,6 @@ img {
   object-fit: scale-down;
   margin-top: 1vh;
 }
-
 
 .squircle {
   border-radius: 25%;
