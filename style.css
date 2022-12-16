@@ -1,5 +1,5 @@
 /* Ryan Yong
-Last updated: 9.12.22 */
+Last updated: 12.16.22 */
 
 /* Import the Quicksand font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
@@ -40,8 +40,9 @@ p, ul {
 }
 
 .logo {
-  max-height: 6vh;
+  max-height: 4vh;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .container {
@@ -90,6 +91,14 @@ p, ul {
   width: 30vh;
   height: 30vh;  
   text-align: center;
+  transition: .2s;
+  z-index: 1;
+}
+
+.works:hover {
+  transform: scale(1.1);
+  transition: .2s;
+  z-index: 2;
 }
 
 .works:hover .container-text {
@@ -97,16 +106,34 @@ p, ul {
   transition: .2s;
 }
 
+.banner-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
 .banner {
   position: relative;
-  width: 96vw;
+  width: 100vw;
   height: 20vh;  
   text-align: center;
+  transition: .2s;
+  z-index: 1;
+}
+
+.banner:hover {
+  transform: scale(1.1);
+  transition: .2s;
+  z-index: 2;
 }
 
 .banner:hover .container-text {
   opacity: 0;
   transition: .2s;
+  transform: scale(1.1);
+
 }
 
 .piccarousel {
@@ -174,6 +201,7 @@ a {
 .topnav a {
   color: black;
   padding: 0vh 2vw 2vh 2vw;
+  text-align: center;
 }
 
 .topnav a.active {
