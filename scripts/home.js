@@ -9,7 +9,7 @@ function mouseCoordinates(event){
     let x = event.clientX;
     let y = event.clientY;
 
-    // let img_name = ""
+    let img_name = "me_bg.jpg"
 
     if (y < window.innerHeight * .65 && y > window.innerHeight * .32) {
         if (x < window.innerWidth / 2) {
