@@ -1,251 +1,174 @@
-/* Ryan Yong
-Last updated: 12.16.22 */
+/* Ryan Yong */
+/* Updated March 3, 2023 */
 
-/* Import the Quicksand font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("stolzl/stylesheet.css");
 
 html {
-  font-family: 'Quicksand', sans-serif;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  margin-bottom: 5vh;
+    font-family: 'Stolzl Thin';
+    /* -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-out; */
 }
 
 body {
-  padding: 0;
-  margin: 0;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
 }
 
 h1 {
-  font-style: italic;
-  text-align: center;
+    text-align: center;
 }
 
-h2 {
-  text-decoration: underline;
-  text-underline-offset: 1vh;
-  padding-bottom: 1vh;
-  margin-top: 5vh;
-  text-align: center;
+.base {
+    background: #1B1C1E;
+    padding-top: 5vh;
+    color: #ebebed;
 }
 
-h3 {
-  text-align: center;
+.tagline {
+    text-align: center;
+    margin: 5vh auto;
 }
 
-p, ul {
-  text-align: justify;
-  margin-left: 25vw;
-  margin-right: 25vw;
+.thumb {
+    max-height: 30vh;
+    max-width: 40vw;
+    border-radius: 20px;
+}
+
+.clickable {
+    z-index: 1;
+    transition: .2s;
+}
+
+.clickable:hover {
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 2;
 }
 
 .logo {
-  max-height: 4vh;
-  display: inline-block;
-  vertical-align: middle;
+    max-height: 6vh;
+    display: block;
+    margin: 0 auto;
+    justify-items: center;
+    transition: .2s;
+    z-index: 1;
 }
 
-.container {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 2vw;
-  margin-top: 2vw;
-}
-
-.container-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .3;
-  transition: .2s;
-}
-
-.container-img:hover {
-  opacity: 1;
-  transition: .2s;
-}
-
-.container-text {
-  color: #0066cc;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 40%;
-  width: 50%;
-  font-size: 2vh;
-  pointer-events: none;
-  opacity: 1;
-  transition: .2s;
-}
-
-.text-big {
-  font-size: 4vh;
-  width: 80%;
-}
-
-.works {
-  position: relative;
-  width: 30vh;
-  height: 30vh;  
-  text-align: center;
-  transition: .2s;
-  z-index: 1;
-}
-
-.works:hover {
-  transform: scale(1.1);
-  transition: .2s;
-  z-index: 2;
-}
-
-.works:hover .container-text {
-  opacity: 0;
-  transition: .2s;
-}
-
-.banner-container {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.banner {
-  position: relative;
-  width: 100vw;
-  height: 20vh;  
-  text-align: center;
-  transition: .2s;
-  z-index: 1;
-}
-
-.banner:hover {
-  transform: scale(1.1);
-  transition: .2s;
-  z-index: 2;
-}
-
-.banner:hover .container-text {
-  opacity: 0;
-  transition: .2s;
-  transform: scale(1.1);
-
-}
-
-.piccarousel {
-  max-width: 90vw;
-  margin: auto;
-  position: relative;
-}
-
-.picback {
-  left: 10vw;
-  cursor: pointer;
-  position: absolute;
-  top: 46%;
-  color: black;
-  font-weight: bold;
-  font-size: 4vh;
-  transition: .5s ease;
-}
-
-.picforward {
-  right: 10vw;
-  cursor: pointer;
-  position: absolute;
-  top: 46%;
-  color: black;
-  font-weight: bold;
-  font-size: 4vh;
-  transition: .5s ease;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.thumbnail {
-  width: 25vh;
-  height: 25vh;
-  object-fit: cover;
-  margin-top: 5vh;
-}
-
-.pic {
-  height: 70vh;
-  object-fit: scale-down;
-  margin-top: 1vh;
-}
-
-.squircle {
-  border-radius: 25%;
+.logo:hover {
+    transform: scale(1.3);
+    transition: .2s;
+    z-index: 2;
 }
 
 a {
-  text-decoration: none;
-  color: #0066cc;
+    color: #ebebed;
+    max-width: fit-content;
 }
 
-.topnav {
-  background-color: #b3daff;
-  padding: 2vh 0vw 2vh 0vw;
-  text-align: center;
+.container-odd {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
 }
 
-.topnav a {
-  color: black;
-  padding: 0vh 2vw 2vh 2vw;
-  text-align: center;
+.container-even {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
 }
 
-.topnav a.active {
-  color: #0066cc;
+.sub-container {
+    width: 40vw;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+
+.contact {
+    margin: 0 auto;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    display: block;
+}
+
+.box {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: fit-content;
+    border: 5px solid #ebebed;
+    border-radius: 20px;
+    transition: .2s;
+    z-index: 1;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: .2s;
+    z-index: 2;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: 0}
-  to {opacity: 4}
+    from {opacity: 0}
+    to {opacity: 1}
 }
-
+  
 @keyframes fade {
-  from {opacity: 0}
-  to {opacity: 4}
+    from {opacity: 0}
+    to {opacity: 1}
 }
 
-@media screen and (max-width: 800px) {
-  h2 {
-    margin-left: 20vw;
-    margin-right: 20vw;
-  }
+/* END OF BASE STYLES */
 
-  p, ul {
-    margin-left: 10vw;
-    margin-right: 10vw;
-  }
 
-  .topnav {
-    padding: 1vh 0vh 1vh 0vh;
-  }
-
-  .picback {
-    left: 0%;
-  }
-  
-  .picforward {
-    right: 0%;
-  }
-
-  .horipic {
-    max-width: 85%;
-  }
-  
-  .vertpic {
-    max-width: 85%;
-  }
+/* HOME PAGE STYLING */
+.home {
+    text-align: center;
+    padding-top: 5vh;
+    color: #ebebed;
 }
+
+.careers-container {
+    display: grid;
+    grid-template-columns: 50vw 50%;
+    grid-template-rows: 100%;
+    padding-bottom: 15vh;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+#home-bg {
+    background: black;
+    background-image: url(images/home/me_bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    margin: 0;
+}
+
+.home-tagline {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/* ABOUT ME STYLING */
+
+
+/* SWD STYLING */
+
+
+/* PHOTOGRAPHY STYLING */
+
+
+/* CONTACT ME STYLING */
