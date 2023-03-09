@@ -18,7 +18,7 @@ function mouseCoordinates(event){
             img_name = "photo.jpg"
         }
     } else {
-        img_name = "me_bg.JPG"
+        img_name = "me_bg.jpg"
     }
 
     // if (prev_img != img_name) { // restart css animation
