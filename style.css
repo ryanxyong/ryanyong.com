@@ -67,6 +67,15 @@ a {
     max-width: fit-content;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+}
+
 .container-odd {
     display: flex;
     justify-content: space-evenly;
