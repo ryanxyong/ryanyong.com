@@ -1,5 +1,6 @@
 let ROOT = "images/home/"
 let bg = document.getElementById('home-bg');
+bg.style.backgroundImage = "url(me_bg.jpg)"
 // let prev_img = "me_bg.JPG"
 // let curr_img = document.documentElement;
 
@@ -9,7 +10,7 @@ function mouseCoordinates(event){
     let x = event.clientX;
     let y = event.clientY;
 
-    let img_name = "me_bg.jpg"
+    // let img_name = "me_bg.jpg"
 
     if (y < window.innerHeight * .65 && y > window.innerHeight * .32) {
         if (x < window.innerWidth / 2) {
