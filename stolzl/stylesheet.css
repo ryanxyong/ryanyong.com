@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Stolzl';
-    src: url('Stolzl-Thin.eot');
+    /* src: url('Stolzl-Thin.eot'); */
     src: local('Stolzl Thin'), local('Stolzl-Thin'),
         url('Stolzl-Thin.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Thin.woff2') format('woff2'),
