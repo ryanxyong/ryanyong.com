@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Stolzl';
-    /* src: url('Stolzl-Light.eot'); */
+    src: url('Stolzl-Light.eot');
     src: local('Stolzl Light'), local('Stolzl-Light'),
         url('Stolzl-Light.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Light.woff2') format('woff2'),
@@ -13,7 +13,7 @@
 @font-face {
     font-family: 'Stolzl Thin';
     /* src: url('Stolzl-Thin.eot'); */
-    src: /* REMOVED LOCAL FOR FIX ON SAFARI */
+    src:
         url('Stolzl-Thin.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Thin.woff2') format('woff2'),
         url('Stolzl-Thin.woff') format('woff'),
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Stolzl Book';
-    /* src: url('Stolzl-Book.eot'); */
+    src: url('Stolzl-Book.eot');
     src: local('Stolzl Book'), local('Stolzl-Book'),
         url('Stolzl-Book.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Book.woff2') format('woff2'),
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Stolzl';
-    /* src: url('Stolzl-Regular.eot'); */
+    src: url('Stolzl-Regular.eot');
     src: local('Stolzl Regular'), local('Stolzl-Regular'),
         url('Stolzl-Regular.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Regular.woff2') format('woff2'),
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: 'Stolzl';
-    /* src: url('Stolzl-Bold.eot'); */
+    src: url('Stolzl-Bold.eot');
     src: local('Stolzl Bold'), local('Stolzl-Bold'),
         url('Stolzl-Bold.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Bold.woff2') format('woff2'),
@@ -60,7 +60,7 @@
 
 @font-face {
     font-family: 'Stolzl';
-    /* src: url('Stolzl-Medium.eot'); */
+    src: url('Stolzl-Medium.eot');
     src: local('Stolzl Medium'), local('Stolzl-Medium'),
         url('Stolzl-Medium.eot?#iefix') format('embedded-opentype'),
         url('Stolzl-Medium.woff2') format('woff2'),
