@@ -1,6 +1,6 @@
 let ROOT = "images/home/"
 let bg = document.getElementById('home-bg');
-bg.style.backgroundImage = "url(me_bg.jpg)"
+// bg.style.backgroundImage = "url(me_bg.jpg)"
 // let prev_img = "me_bg.JPG"
 // let curr_img = document.documentElement;
 

@@ -180,8 +180,8 @@ a {
 }
 
 #home-bg {
-    background: black;
-    background-image: url(images/home/me_bg.JPG);
+    background: #1B1C1E;
+    background-image: url(images/home/me_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     width: 100%;
