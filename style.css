@@ -69,7 +69,7 @@ a {
 
 .navbar {
     display: grid;
-    grid-template-columns: 33% 34% 33%;
+    grid-template-columns: 40% 20% 40%;
     grid-template-rows: 100%;
 
     justify-items: center;
@@ -156,6 +156,10 @@ a {
 
     h4 {
         font-size: 3vw;
+    }
+
+    .base {
+        padding-top: 2vh;
     }
   }
 
