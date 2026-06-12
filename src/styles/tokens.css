@@ -1,0 +1,63 @@
+/* ============================================================
+   Design tokens — the entire visual identity lives here.
+   Re-skin the whole site by editing these values.
+   ============================================================ */
+
+:root {
+  /* --- Color: light theme (default) --- */
+  /* A clean paper-white, deliberately NOT the warm-cream cliché. */
+  --bg:            #FBFBFA;
+  --surface:       #FFFFFF;
+  --text:          #1A1A18;  /* warm near-black */
+  --text-soft:     #57564F;  /* secondary copy */
+  --text-faint:    #8C8B83;  /* meta, captions */
+  --line:          #E7E6E0;  /* hairlines */
+  --line-strong:   #D5D4CC;
+
+  /* One accent, used sparingly. Coral. */
+  --accent:        #D85A30;
+  --accent-ink:    #993C1D;  /* accent dark enough for text on light bg */
+  --accent-wash:   #FAECE7;  /* faint accent fill */
+
+  /* A quiet "available" green for the status dot only. */
+  --status:        #1D9E75;
+
+  /* --- Type --- */
+  /* Display: Georgia is a genuinely good editorial serif and ships
+     everywhere — no font service needed. Swap via @font-face if desired. */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                  Helvetica, Arial, sans-serif;
+
+  --step-eyebrow: 0.78rem;   /* labels */
+  --step-meta:    0.83rem;   /* dates, tags */
+  --step-body:    1.0625rem; /* 17px */
+  --step-lead:    1.1875rem; /* intro paragraphs */
+  --step-h3:      1.25rem;
+  --step-h2:      1.6rem;
+  --step-h1:      clamp(2rem, 4.5vw, 2.85rem);
+
+  /* --- Layout --- */
+  --measure:      62ch;      /* comfortable reading width */
+  --page-max:     1040px;
+  --gutter:       clamp(1.25rem, 5vw, 3rem);
+  --radius:       6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:          #17160F;
+    --surface:     #1F1E16;
+    --text:        #F2F0E8;
+    --text-soft:   #B8B6AC;
+    --text-faint:  #86847A;
+    --line:        #322F25;
+    --line-strong: #423F33;
+
+    --accent:      #E8743F;
+    --accent-ink:  #F0997B;
+    --accent-wash: #2A1A12;
+
+    --status:      #5DCAA5;
+  }
+}
