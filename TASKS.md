@@ -38,11 +38,11 @@ Newest posts go at the top of the array. The homepage shows the first three.
 ## Add a photo
 
 **Steps:**
-1. Drop the image file into `public/photos/` (e.g. `portrait-maya.jpg`).
+1. Drop the image file into `public/photos/` (e.g. `portrait-sharon.jpg`).
 2. **File:** `src/data/photos.js` — add an object to `photos`:
 
 ```js
-{ id: 'p7', src: '/photos/portrait-maya.jpg', alt: 'Maya in window light', caption: 'Maya, 2026' },
+{ id: 'p7', src: '/photos/portrait-sharon.jpg', alt: 'Sharon in window light', caption: 'Sharon, 2026' },
 ```
 
 - `alt` is required (accessibility) — describe the image, not "photo of".
