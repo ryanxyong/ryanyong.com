@@ -63,7 +63,8 @@ src/
   App.jsx        ← HashRouter + all route definitions
   components/
     Layout.jsx   ← Nav + Footer + scroll-to-top on route change
-    Nav.jsx      ← sticky header, pulls links from data/site.js
+    Nav.jsx      ← sticky header, pulls links from data/site.js; collapses to
+                   a hamburger menu under 640px (closes on route change)
     Footer.jsx   ← mailto + socials
     Gallery.jsx  ← photo grid; renders a placeholder when src is null
   pages/         ← one component per route (Home, Work, CaseStudy, Writing, Post,
@@ -132,6 +133,13 @@ means editing tokens, not chasing values through components.
   literally as backslash-u. So in `data/*.js` use `\u2019`/`\u2014` freely, but in
   `.jsx` markup type the literal character (’ — → “ ”) or a JSX expression. This was
   hit during the initial build; check it whenever you add JSX copy.
+- **`.section` is vertical-padding only — keep it that way.** Interior pages put
+  `.page` and `.section` on the *same* element (`<article className="page section">`).
+  `.page` supplies the horizontal gutter (`padding: 0 var(--gutter)`); `.section`
+  must only set vertical padding via `padding-block`. If you ever rewrite `.section`
+  to use the `padding` shorthand (e.g. `padding: <v> 0`), its later-in-file `0` will
+  silently overwrite `.page`'s gutter and every interior page's text slams against
+  the screen edges on mobile. This bug shipped once; don't bring it back.
 - **Don't invent metrics.** Case-study outcomes are intentionally directional
   ("substantially", "weeks → hours") because real figures weren't cleared for
   publication. Code comments mark where to swap exact numbers. Never fabricate a
