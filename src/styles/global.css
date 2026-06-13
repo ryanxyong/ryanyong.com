@@ -32,7 +32,9 @@ button { font: inherit; }
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
-.section { padding: clamp(3rem, 8vw, 5.5rem) 0; }
+/* Vertical only — uses padding-block so it never overrides the horizontal
+   gutter from .page when both classes sit on the same element. */
+.section { padding-block: clamp(3rem, 8vw, 5.5rem); }
 .section + .section { border-top: 1px solid var(--line); }
 .measure { max-width: var(--measure); }
 
@@ -80,6 +82,7 @@ button { font: inherit; }
   color: var(--text);
   font-family: var(--font-display);
   font-size: 1.35rem;
+  white-space: nowrap;
 }
 .nav-logo {
   height: 1.5rem;
@@ -101,6 +104,56 @@ button { font: inherit; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a.active { color: var(--text); }
 .nav-links a.nav-cta { color: var(--accent-ink); }
+
+/* Mobile menu toggle — hidden on desktop, shown below the breakpoint. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: -0.5rem -0.5rem -0.5rem 0; /* enlarge tap target without shifting layout */
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  margin: 0 auto;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+.nav-toggle.is-open .nav-toggle-bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
+.nav-toggle.is-open .nav-toggle-bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.25rem var(--gutter) 0.75rem;
+    font-size: 1.05rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .nav-links a:first-child { border-top: 0; }
+}
 
 /* ============================================================
    Hero
