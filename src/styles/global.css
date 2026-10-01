@@ -311,6 +311,72 @@ button { font: inherit; }
 }
 .frame-caption { font-size: var(--step-meta); color: var(--text-faint); margin: 0.5rem 0 0; }
 .gallery-figure { margin: 0; }
+.frame-button {
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  cursor: zoom-in;
+}
+.frame-button img { transition: opacity 0.15s ease; }
+.frame-button:hover img { opacity: 0.88; }
+
+/* Lightbox: full-screen native <dialog>; the photo is shown uncropped. */
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: clamp(0.75rem, 3vw, 1.75rem) var(--gutter);
+  border: 0;
+  background: transparent;
+  color: var(--text);
+}
+.lightbox[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  animation: lightbox-in 0.2s ease both;
+}
+.lightbox::backdrop { background: var(--bg); }
+.lightbox[open]::backdrop { animation: lightbox-in 0.2s ease both; }
+@keyframes lightbox-in { from { opacity: 0; } }
+html:has(.lightbox[open]) { overflow: hidden; } /* stop the page scrolling behind */
+
+.lightbox-top { display: flex; justify-content: flex-end; }
+.lightbox-stage {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-stage img {
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.lightbox-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.lightbox-caption { margin: 0; font-size: var(--step-meta); color: var(--text-soft); }
+.lightbox-nav { display: flex; align-items: baseline; gap: 0.75rem; white-space: nowrap; }
+.lightbox-count { font-size: var(--step-meta); color: var(--text-faint); font-variant-numeric: tabular-nums; }
+.lightbox-button {
+  padding: 0.35rem 0.25rem;
+  background: none;
+  border: 0;
+  font-size: var(--step-meta);
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.lightbox-button:hover { color: var(--text); }
 
 /* ============================================================
    Eating

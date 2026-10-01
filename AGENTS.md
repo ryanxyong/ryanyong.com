@@ -66,7 +66,9 @@ src/
     Nav.jsx      ← sticky header, pulls links from data/site.js; collapses to
                    a hamburger menu under 640px (closes on route change)
     Footer.jsx   ← mailto + socials
-    Gallery.jsx  ← photo grid; renders a placeholder when src is null
+    Gallery.jsx  ← photo grid; renders a placeholder when src is null. Clicking a
+                   photo opens an uncropped lightbox (native <dialog>, no library):
+                   Esc/backdrop/Close to exit, ←/→ keys, buttons, or swipe to page
   pages/         ← one component per route (Home, Work, CaseStudy, Writing, Post,
                    Photography, Eating, About, NotFound)
   data/          ← ALL editable content lives here (see §4)
@@ -188,3 +190,21 @@ Adding services (analytics, newsletter, CMS), switching the router or styling
 approach, introducing a UI framework, or changing the visual identity. These are
 deliberate decisions documented above — propose, don't unilaterally change. Update
 this file in the same change whenever you alter anything it describes.
+
+---
+
+## 10. Future considerations
+
+Known issues the owner has deliberately deferred. Raise them when relevant; don't
+fix them unasked.
+
+- **Photos are served as full-resolution camera originals** (as of 2026-09-30).
+  Files in `public/photos/` run 1–31 MB and up to ~8700px on the long edge, and
+  both the grid thumbnails and the lightbox load the same original, so the
+  Photography page pulls ~75 MB (painful on mobile data). Proposed fix, discussed
+  and postponed: a dev-only resize script (`npm run photos`, using `sharp`) that
+  writes two copies per photo, ~800px for the grid and ~2400px for the lightbox,
+  with originals moved out of `public/` so they stop deploying. `photos.js` would
+  keep its `{ id, src, alt, caption }` shape. A build-time plugin
+  (vite-imagetools) was ruled out because it would turn photo entries into
+  `import`s, breaking the content-is-data model in §4.
