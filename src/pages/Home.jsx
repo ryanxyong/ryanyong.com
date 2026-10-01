@@ -11,7 +11,6 @@ export default function Home() {
     <div className="page">
 
       <section className="hero hero-rise">
-        <p className="status"><span className="status-dot" aria-hidden="true" />{hero.status}</p>
         <h1 className="hero-title">{hero.title}</h1>
         <p className="hero-lead">{hero.lead}</p>
       </section>

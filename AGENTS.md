@@ -111,8 +111,8 @@ means editing tokens, not chasing values through components.
 - **Color:** light theme by default, dark theme via `prefers-color-scheme` — every
   color is a token defined in both. If you introduce a new color, add it as a token
   in **both** themes; never hardcode a hex in a component or in `global.css`.
-- **Accent:** `--accent` (coral) is used sparingly and on purpose — links, the status
-  dot, the pull-quote rule, tag fills. Adding more accent dilutes it. Resist.
+- **Accent:** `--accent` (coral) is used sparingly and on purpose — links, the
+  pull-quote rule, tag fills. Adding more accent dilutes it. Resist.
 - **Type:** `--font-display` is Georgia (editorial serif, ships everywhere, no font
   service); `--font-body` is the system sans stack. To add a custom face, self-host
   a `.woff2` under `public/fonts/`, add one `@font-face` in `global.css`, repoint the
@@ -130,8 +130,8 @@ means editing tokens, not chasing values through components.
 
 - **JSX text vs JS strings — the easy bug.** `\uXXXX` escapes only resolve inside
   **JS string literals** (i.e. the `data/` files). In **JSX text nodes** they render
-  literally as backslash-u. So in `data/*.js` use `\u2019`/`\u2014` freely, but in
-  `.jsx` markup type the literal character (’ — → “ ”) or a JSX expression. This was
+  literally as backslash-u. So in `data/*.js` use `\u2019`/`\u201C` freely, but in
+  `.jsx` markup type the literal character (’ → “ ”) or a JSX expression. This was
   hit during the initial build; check it whenever you add JSX copy.
 - **`.section` is vertical-padding only — keep it that way.** Interior pages put
   `.page` and `.section` on the *same* element (`<article className="page section">`).
@@ -159,7 +159,9 @@ means editing tokens, not chasing values through components.
 ## 7. Voice & copy (if asked to write content)
 
 Match the owner's register: **direct, understated, concrete, low on fluff.** Plain
-verbs, sentence case, no buzzwords or LinkedIn-speak. Lead with the human and the
+verbs, sentence case, no buzzwords or LinkedIn-speak. **No em dashes in site copy**
+(owner preference): use a comma, colon, or period instead. En dashes in ranges
+(`2025\u20132026`) are fine. Lead with the human and the
 outcome, keep the tech as a quiet subtitle. The existing hero, about, and case
 studies are the reference for tone — read them before writing anything new, and
 match their cadence. When possible, ask the owner for a sample of their own writing

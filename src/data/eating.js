@@ -1,5 +1,5 @@
 // Eating. A running, opinionated list. Replace these placeholders with the
-// real places when you're ready \u2014 a name, a neighborhood, and one honest line.
+// real places when you're ready: a name, a neighborhood, and one honest line.
 
 export const intro =
   'A running, opinionated list of the places worth the trip in New York and beyond.'

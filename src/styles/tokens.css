@@ -1,5 +1,5 @@
 /* ============================================================
-   Design tokens — the entire visual identity lives here.
+   Design tokens: the entire visual identity lives here.
    Re-skin the whole site by editing these values.
    ============================================================ */
 
@@ -19,12 +19,9 @@
   --accent-ink:    #993C1D;  /* accent dark enough for text on light bg */
   --accent-wash:   #FAECE7;  /* faint accent fill */
 
-  /* A quiet "available" green for the status dot only. */
-  --status:        #1D9E75;
-
   /* --- Type --- */
   /* Display: Georgia is a genuinely good editorial serif and ships
-     everywhere — no font service needed. Swap via @font-face if desired. */
+     everywhere, no font service needed. Swap via @font-face if desired. */
   --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
   --font-body:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
                   Helvetica, Arial, sans-serif;
@@ -57,7 +54,5 @@
     --accent:      #E8743F;
     --accent-ink:  #F0997B;
     --accent-wash: #2A1A12;
-
-    --status:      #5DCAA5;
   }
 }

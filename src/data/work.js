@@ -11,17 +11,17 @@ export const work = [
     meta: 'FDE \u00b7 2026 \u00b7 Sales/Marketing',
     tags: ['multi-agent', 'ReAct', 'human-in-the-loop'],
     summary:
-      'Designed a system of cooperating agents to flag the data anomalies a rules engine kept missing \u2014 embedded with the customer to ship it end to end.',
+      'Designed a system of cooperating agents to flag the data anomalies a rules engine kept missing, and embedded with the customer to ship it end to end.',
     sections: [
       {
         heading: 'The problem',
         body:
-          'Their rules engine caught the obvious things \u2014 a number out of range, a field gone blank. What it missed were the anomalies that only showed up in how records related to each other, and those were the expensive ones. They\u2019d slip through until someone happened to notice, often weeks and a lot of money later.',
+          'Their rules engine caught the obvious things: a number out of range, a field gone blank. What it missed were the anomalies that only showed up in how records related to each other, and those were the expensive ones. They\u2019d slip through until someone happened to notice, often weeks and a lot of money later.',
       },
       {
         heading: 'What I built',
         body:
-          'A system of cooperating agents instead of one do-everything model. One pulls the relevant context, one reasons over it the way an analyst would, one decides whether something\u2019s actually wrong. A person reviews every flag before it acts \u2014 so the team kept control, and the system earned their trust instead of asking for it up front.',
+          'A system of cooperating agents instead of one do-everything model. One pulls the relevant context, one reasons over it the way an analyst would, one decides whether something\u2019s actually wrong. A person reviews every flag before it acts, so the team kept control, and the system earned their trust instead of asking for it up front.',
       },
       {
         heading: 'The outcome',
@@ -37,7 +37,7 @@ export const work = [
     meta: 'FDE \u00b7 2025\u20132026 \u00b7 Defense',
     tags: ['data pipelines', 'ERP harmonization', 'cost reduction'],
     summary:
-      'Unified a patchwork of ERP systems into one pipeline the in-house team could own \u2014 cheaper to run and no longer afraid to touch.',
+      'Unified a patchwork of ERP systems into one pipeline the in-house team could own: cheaper to run and no longer afraid to touch.',
     sections: [
       {
         heading: 'The problem',
@@ -47,7 +47,7 @@ export const work = [
       {
         heading: 'What I built',
         body:
-          'One harmonized pipeline on a shared data model the whole organization could trust, rebuilt so the in-house team could own and extend it after we left \u2014 not a black box that depended on me to keep breathing.',
+          'One harmonized pipeline on a shared data model the whole organization could trust, rebuilt so the in-house team could own and extend it after we left, not a black box that depended on me to keep breathing.',
       },
       {
         heading: 'The outcome',

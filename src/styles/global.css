@@ -32,7 +32,7 @@ button { font: inherit; }
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
-/* Vertical only — uses padding-block so it never overrides the horizontal
+/* Vertical only. Uses padding-block so it never overrides the horizontal
    gutter from .page when both classes sit on the same element. */
 .section { padding-block: clamp(3rem, 8vw, 5.5rem); }
 .section + .section { border-top: 1px solid var(--line); }
@@ -105,7 +105,7 @@ button { font: inherit; }
 .nav-links a.active { color: var(--text); }
 .nav-links a.nav-cta { color: var(--accent-ink); }
 
-/* Mobile menu toggle — hidden on desktop, shown below the breakpoint. */
+/* Mobile menu toggle: hidden on desktop, shown below the breakpoint. */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -163,18 +163,6 @@ button { font: inherit; }
 @keyframes rise {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-size: var(--step-meta);
-  color: var(--text-soft);
-  margin-bottom: 1.5rem;
-}
-.status-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--status);
 }
 .hero-title {
   font-family: var(--font-display);

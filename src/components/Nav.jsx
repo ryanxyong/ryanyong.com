@@ -13,7 +13,7 @@ export default function Nav() {
   return (
     <header className="nav">
       <div className="nav-inner">
-        <Link to="/" className="wordmark" aria-label={`${site.name} — home`}>
+        <Link to="/" className="wordmark" aria-label={`${site.name}, home`}>
           <Logo className="nav-logo" />
           <span className="wordmark-text">{site.wordmark}</span>
         </Link>
