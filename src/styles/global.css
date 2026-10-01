@@ -209,7 +209,6 @@ button { font: inherit; }
   padding: 1.6rem 0;
   border-top: 1px solid var(--line);
 }
-.work-item:last-child { border-bottom: 1px solid var(--line); }
 .work-item:hover .work-title { color: var(--accent-ink); }
 .work-title {
   font-size: var(--step-h3);
@@ -279,6 +278,7 @@ button { font: inherit; }
   padding: 0.95rem 0;
   border-bottom: 1px solid var(--line);
 }
+.post-row:last-child { border-bottom: 0; }
 .post-row:hover .post-row-title { color: var(--accent-ink); }
 .post-row-title { transition: color 0.15s ease; }
 .post-row-date { font-size: var(--step-meta); color: var(--text-faint); white-space: nowrap; }
@@ -319,6 +319,8 @@ button { font: inherit; }
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--line);
 }
+/* Rules sit between items only; the section divider or footer closes the list. */
+.eat-item:last-child { border-bottom: 0; }
 .eat-head {
   display: flex;
   align-items: baseline;

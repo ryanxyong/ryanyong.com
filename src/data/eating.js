@@ -13,7 +13,7 @@ export const places = [
   {
     name: 'Hyderabadi Zaiqa',
     area: 'Murray Hill',
-    note: 'Top-tier Indian food - e.g. butter chicken.',
+    note: 'Top-tier Indian food, like the butter chicken.',
   },
   {
     name: 'Shinn East',
